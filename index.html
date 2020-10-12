@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+    </script>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    <div id="textcontent">
+        <h1> CATERGORY: BASKETBALL </h1> 
+        <h2>GUESS THE PLAYER: </h2>
+    </div>
+    <div id="hangmanimgdiv"><img id="hangmanimg" src="https://i.imgur.com/J58G80Y.png" style= "width: 30%;">
+    <div id = "wrongclicks" >REMAINING LIVES: <span id= "wrongcounter"> 6 </span></div>
+</div>
+    <div id="guesshere"></div>
+    <div id="keybtns"> 
+        <div id= line1>
+        <button id='A' class='letters'>A </button>
+        <button id='B' class='letters'>B </button>
+        <button id='C' class='letters'> C</button>
+        <button id='D' class='letters'>D </button>
+        <button id='E' class='letters'>E </button>
+        <button id='F' class='letters'>F </button>
+        <button id='G' class='letters'>G </button>
+        <button id='H' class='letters'>H </button>
+    </div>
+    <div id=line2>
+        <button id='I' class='letters'>I </button>
+        <button id='J' class='letters'>J </button>
+        <button id='K' class='letters'>K </button>
+        <button id='L' class='letters'>L </button>
+        <button id='M' class='letters'>M </button>
+        <button id='N' class='letters'>N </button>
+        <button id='O' class='letters'>O </button>
+        <button id='P' class='letters'>P </button>
+    </div>
+    <div id="line3">
+        <button id='Q' class='letters'>Q </button>
+        <button id='R' class='letters'>R </button>
+        <button id='S' class='letters'>S </button>
+        <button id='T' class='letters'>T </button>
+        <button id='U' class='letters'>U </button>
+        <button id='V' class='letters'>V </button>
+        <button id='W' class='letters'>W </button>
+        <button id='X' class='letters'>X </button>
+        <button id='Y' class='letters'>Y </button>
+        <button id='Z' class='letters'>Z </button> 
+    </div>
+    <button id="reset"> RESET</button>
+    </div>
+</div>
+
+<div class="winmodal">
+    <div class="winmodaltext">
+        <h2>YOU WIN</h2>
+        <button class="playagain">PLAY AGAIN</button>
+    </div>
+</div>
+<div class="losemodal">
+    <div class="losemodaltext">
+        <h2>YOU LOST!</h2>
+        <h4>ANSWER WAS: <span id='answerwas'> </span> </h4>
+        <button class="playagain2">PLAY AGAIN</button>
+    </div>
+</div>
+
+    <script src="main.js"> </script>
+</body>
+</html>
