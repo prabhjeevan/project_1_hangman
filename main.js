@@ -1,4 +1,9 @@
-var players = ['LEBRON', 'BRYANT', 'JORDAN', 'JAMES', 'KOBE', 'KAWHI', 'PAUL', 'DAVIS', 'JOKIC', 'OBERT', 'BUTLER', 'LOWRY']
+var game = [music, avengers, players];
+
+
+var music = ['DRAKE', 'WAYNE', 'MILEY', 'GRANDE', 'KATY', 'MICHAEL', 'QUAVO', 'MINAJ', 'CARBIB', 'BTS', 'PRINCE', 'LOGIC', 'ELVIS']
+var avengers = ['SPIDERMAN', 'THANOS', 'HULK', 'THOR', 'WANDA', 'STARK', 'LOKI', 'JARVIS', 'STAN', 'SHURI', 'WASP', 'STRANGE', 'FALCON', 'ULTRON']
+var players = ['', 'LAKERS', 'LEBRON', 'BRYANT', 'JORDAN', 'JAMES', 'KOBE', 'KAWHI', 'PAUL', 'DAVIS', 'JOKIC', 'OBERT', 'BUTLER', 'LOWRY']
 
 var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
         'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '-']
@@ -90,10 +95,38 @@ showBlank(answer);
 
 // FUNCTIONS 
     function randomWord() {
-        answer = players[Math.floor(Math.random()* players.length)];
+        let arraychooser = Math.floor(Math.random()*game.length)
+        console.log(arraychooser);
+        if (arraychooser == 0) {
+            answer = music[Math.floor(Math.random()*music.length)];
+            category(arraychooser);
+        } else if (arraychooser == 1) {
+            answer = avengers[Math.floor(Math.random()*avengers.length)];
+            category(arraychooser);
+        } else if (arraychooser == 2) {
+            answer = players[Math.floor(Math.random()*players.length)];
+            category(arraychooser);
+        }
+        // answer = players[Math.floor(Math.random()* players.length)];
         console.log(answer);
-    }
+    };
 
+    function category(arraychooser) {
+        if (arraychooser == 0) {
+            document.getElementById('heading').innerHTML = 'CATERGORY: MUSIC'
+            document.getElementById('subheading').innerHTML = 'FIRST NAME OF ARTIST'
+            document.body.style.backgroundImage = 'url(https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)'
+            document.getElementById('keybtns').style.backgroundColor = 'rgba(255,255,255,0.25'
+            // document.getElementById('keybtns').style.backgroundSize = 'width: 100px; height 200px;'
+        } else if (arraychooser == 1) {
+            document.getElementById('heading').innerHTML = 'CATERGORY: MARVEL AVENGERS'
+            document.getElementById('subheading').innerHTML = 'FIRST NAME OF A MARVEL CHARACTER'
+        } else if ( arraychooser == 2) {
+            document.getElementById('heading').innerHTML = 'CATERGORY: BASKETBALL'
+            document.getElementById('subheading').innerHTML = 'FIRST OR LAST NAME OF PLAYER OR TEAM'
+        }
+
+    }
 
 function guessed(event) {
     let value = event.target.id;
