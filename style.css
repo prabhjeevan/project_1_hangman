@@ -1,26 +1,23 @@
 body{
     margin: 0;
-    background-image: url(https://wonderfulengineering.com/wp-content/uploads/2016/03/Basketball-Wallpaper-1.jpg);
+    background-color: black;
     background-size: cover;
     text-align: center;
-
 }
 
-#textcontent{
+#textcontent {
     font-family: 'Michroma', sans-serif;
     color: white;
     font-size: 19px;
 }
 
-#keybtns{
+#keybtns {
     margin: 20px 25px;
    width: 42%;
    margin: auto;
    margin-top: 25px;
    padding: 10px 0px 5px 0px;
-
    border-radius: 15px;
-
 }
 
 
@@ -31,7 +28,7 @@ body{
   font-size: 45px;
 }
 
-.letters{
+.letters {
     padding: 7px;
     margin: 15px;
     margin-top: 0px;
@@ -43,8 +40,7 @@ body{
     border-radius: 10px;
     text-decoration: none;
     transition: .3s;
-    font-family: 'Michroma', sans-serif;
-    
+    font-family: 'Michroma', sans-serif;  
 }
 
 .letters:hover {
@@ -71,6 +67,7 @@ body{
     overflow: hidden;
     font-family: 'Michroma', sans-serif;
 }
+
 #reset:hover {
     background: lime;
     cursor: pointer;
@@ -84,6 +81,113 @@ body{
    font-size: 25px;
 }
 
+
+#basketball {
+    position: fixed;
+    display: inline-block;
+    right: 200px;
+    top: 400px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgba(93, 206, 100, 0.726);
+    color: black;
+    border: 1px solid #338033;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    font-family: 'Michroma', sans-serif;
+}
+
+#basketball:hover {
+    background: lime;
+    cursor: pointer;
+}
+
+#heading, #subheading {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+#musicbtn {
+    position: fixed;
+    display: inline-block;
+    right: 200px;
+    top: 475px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgba(93, 206, 100, 0.726);
+    color: black;
+    border: 1px solid #338033;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    font-family: 'Michroma', sans-serif;
+}
+
+#musicbtn:hover {
+    background: lime;
+    cursor: pointer;
+}
+
+#random {
+    position: fixed;
+    display: inline-block;
+    right: 200px;
+    top: 325px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgba(93, 206, 100, 0.726);
+    color: black;
+    border: 1px solid #338033;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    font-family: 'Michroma', sans-serif;
+}
+
+#random:hover {
+    background: lime;
+    cursor: pointer;
+}
+
+#avengersbtn {
+    position: fixed;
+    display: inline-block;
+    right: 200px;
+    top: 550px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgba(93, 206, 100, 0.726);
+    color: black;
+    border: 1px solid #338033;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .6s;
+    overflow: hidden;
+    font-family: 'Michroma', sans-serif;
+}
+#avengersbtn:hover {
+    background: lime;
+    cursor: pointer;
+}
+
+#notes{ 
+    position: fixed;
+    top: 200px;
+    right: 150px;
+    width: 280px;
+   color: white;
+   font-family: 'Michroma', sans-serif;
+   font-size: 20px;
+   letter-spacing: 2px;
+   word-spacing: 5px;
+}
+#resetnotes {
+    color:red;
+}
 .winmodal {
     position: fixed;
     width: 100%;
@@ -98,6 +202,10 @@ body{
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
+}
+.buttonhide {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .winmodalshow{
@@ -191,6 +299,7 @@ body{
     cursor: pointer;
 }
 
+
 @media (max-width: 500px) {
 
     body {
@@ -264,7 +373,6 @@ body{
         cursor: pointer;
     }
     #wrongclicks {
-       
         margin-left: 0;
         margin-top: 180px;
         margin-bottom: 150px;
@@ -272,8 +380,119 @@ body{
        font-family: 'Michroma', sans-serif;
        font-size: 13px;
     }
+   
+
     #hangmanimg{
         width: 30%;
     }
+    .winmodal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Michroma', sans-serif;
+        font-size: 15px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s;
+    }
+    
+    .winmodalshow{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .winmodaltext {
+        background-color: rgba(255,255,255,0.8);
+        width: 60%;
+        height: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 5px;
+        
+    }
+    .losemodal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Michroma', sans-serif;
+        font-size: 15px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s;
+    }
+    
+    .losemodalshow{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .losemodaltext {
+        background-color: rgba(255,255,255,0.8);
+        width: 60%;
+        height: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 5px;
+        
+    }
+    .playagain {
+        padding: 10px;
+        position: relative;
+        margin-top: 10px;
+        font-size: 20px;
+        background-color: rgba(255, 0, 0, 0.7);
+        box-sizing: border-box;
+        color: black;
+        border: 1px solid #338033;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: .6s;
+        overflow: hidden;
+        font-family: 'Michroma', sans-serif;
+    }
+    
+    .playagain:hover {
+        background: lime;
+        cursor: pointer;
+    }
+    .playagain2 {
+        padding: 15px;
+        position: relative;
+        margin-top: 0px;
+        font-size: 10px;
+        background-color: rgba(255, 0, 0, 0.7);
+        box-sizing: border-box;
+        color: black;
+        border: 1px solid #338033;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: .6s;
+        overflow: hidden;
+        font-family: 'Michroma', sans-serif;
+    }
+    
+    .playagain2:hover {
+        background: lime;
+        cursor: pointer;
+    }
 
 }
+
